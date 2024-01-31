@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+
+{% block container %}
+<div class="col-sm-6 offset-sm-3">
+  <div class="card">
+    <!-- Rastgele image URL seçimi -->
+    <img src="{{ random_image_url }}" class="card-img-top" alt="...">
+
+    <div class="card-body">
+      <h5 class="card-title fw-bold text-uppercase">{{ todo.title }}</h5>
+      <p class="card-text mb-2 text-muted">{{ todo.category }}</p>
+      <p class="card-text">{{ todo.content }}</p>
+      <ul class="list-unstyled fs-6">
+        <li class="fw-lighter">created at: {{ todo.created_at | date:"Y-m-d H:i:s" }}</li>
+        <li class="fw-lighter">updated at: {{ todo.updated_at | date:"Y-m-d H:i:s" }}</li>
+      </ul>
+      <a href="/" class="btn btn-outline-secondary">HomePage</a>
+    </div>
+  </div>
+</div>
+{% endblock container %}

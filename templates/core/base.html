@@ -1,0 +1,39 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-dGsRr46T/NfQ8YObemfnVAa5Hj5FwxUpJmxbg9SmRFarFdbqVugw9e3t/AdCI3PV4iSnLnsb3qFVtm4JOKEzQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'core/navbar.html' %}
+    <!-- End Navbar -->
+    
+    <div class="container my-5">
+        {% block container %}
+        
+        {% endblock container %}
+    </div>
+
+    <!-- Bootsrap core JS  -->
+
+    {% include 'core/footer.html' with motivation_quote=motivation_quote %}
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
